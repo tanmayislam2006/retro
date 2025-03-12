@@ -16,6 +16,7 @@
     <style type="text/tailwindcss">
         @theme {
           --color-primaryColor:#7A73D1;
+          --color-bordercolor: #E9E9E9;
         }
       </style>
 </head>
@@ -76,7 +77,7 @@
         <section class=" rounded-lg my-2 bg-[url('./images/banner.png')] bg-cover bg-center ">
             <div class=" flex justify-around">
                 <!-- text and search box -->
-                <div class="my-10 space-y-10">
+                <div class="my-20 space-y-10">
                     <h1 class="font-bold text-5xl max-w-sm  text-white">Welcome to the <span
                             class="bg-clip-text text-transparent bg-gradient-to-r from-blue-800 to-blue-700">ReTro</span>
                         Forum</h1>
@@ -89,36 +90,386 @@
                             class="cursor-pointer absolute right-36 top-1/2 transform -translate-y-1/2 text-white bg-primaryColor px-4 py-2 rounded-4xl font-bold">Search</button>
                     </div>
                 </div>
-                <div class="bg-white my-4 h-52 p-8 rounded-xl">
-                    <table class=" ">
-                        <tr class="text-gray-600 space-x-5 my-3">
-                            <td class="px-6">Register User</td>
-                            <td class="px-6">1</td>
-                        </tr>
-                        <tr class="text-gray-600 space-x-5 my-3">
-                            <td class="px-6">Register User</td>
-                            <td class="px-6">1</td>
-                        </tr>
-                        <tr class="text-gray-600 space-x-5 my-3">
-                            <td class="px-6">Register User</td>
-                            <td class="px-6">1</td>
-                        </tr>
-                        <tr class="text-gray-600 space-x-5 my-3">
-                            <td class="px-6">Register User</td>
-                            <td class="px-6">1</td>
-                        </tr>
-                        <tr class="text-gray-600 space-x-5 my-3">
-                            <td class="px-6">Register User</td>
-                            <td class="px-6">1</td>
-                        </tr>
-                        <tr class="text-gray-600 space-x-5 my-3">
-                            <td class="px-6">Register User</td>
-                            <td class="px-6">1</td>
-                        </tr>
-                    </table>
+                <div class="flex items-center">
+                    <div class="flex items-center bg-white h-52 p-8 rounded-xl">
+                        <div class="">
+                            <table class="">
+                                <tr class="text-gray-600 space-x-5 my-5">
+                                    <td class="px-6 font-bold text-lg">Register User</td>
+                                    <td class="px-6 font-bold text-lg">1</td>
+                                </tr>
+                                <tr class="text-gray-600 space-x-5 my-5">
+                                    <td class="px-6 font-bold text-lg">Forum</td>
+                                    <td class="px-6 font-bold text-lg">5</td>
+                                </tr>
+                                <tr class="text-gray-600 space-x-5 my-5">
+                                    <td class="px-6 font-bold text-lg">Topics</td>
+                                    <td class="px-6 font-bold text-lg">3</td>
+                                </tr>
+                                <tr class="text-gray-600 space-x-5 my-5">
+                                    <td class="px-6 font-bold text-lg">Replies</td>
+                                    <td class="px-6 font-bold text-lg">10</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+        </section>
+        <section class="my-10 ">
+            <!-- text content  -->
+            <div class="flex flex-col items-center">
+                <h3 class="font-bold text-3xl text-center">Let’s Discuss</h3>
+                <p class="max-w-md text-md my-3 text-gray-500 text-center">Yes, you can run unit tests and view the
+                    results directly within the app. The integrated testing features allow for a streamlined .</p>
+            </div>
+            <div class="grid grid-cols-10 gap-3">
+                <!-- div  for card -->
+                <div class="col-span-7  ">
+                    <div class="bg-[#12132D10] rounded-lg px-5 py-3 flex justify-evenly gap-2 my-5 cursor-pointer">
+                        <div class="">
+                            <!-- images -->
+                            <div class="rounded-full border-2 border-purple-400 p-1 w-16 h-16 "><img
+                                    src="https://i.ibb.co/z8zx95w/pexels-davide-de-giovanni-1649675.jpg" alt=""
+                                    class=" rounded-full w-ful"></div>
+                        </div>
+                        <!-- text content  -->
+                        <div class="">
+                            <div class="text-gray-600">
+                                <span class="">#: Music</span> <span class="mx-5">Author: Awlad Hossain</span>
+                            </div>
+                            <h3 class="text-lg font-bold my-2">10 Kids Unaware of Their Halloween Costume</h3>
+                            <p class="text-gray-600 max-w-md my-3 mb-6">It’s one thing to subject yourself to ha
+                                Halloween
+                                costume mishap because, hey that’s your prerogative</p>
+                            <!-- lijke button  -->
+                            <div class="flex border-dashed border-t-2 border-gray-400 justify-between items-center">
+                                <div class="py-3  flex gap-5">
+                                    <div class="flex gap-3 text-gray-600 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                        </svg>
+
+                                        <span class="text-gray-600">5600</span>
+                                    </div>
+                                    <div class="flex gap-3 text-gray-600 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                        </svg>
+                                        <span class="text-gray-600">560</span>
+                                    </div>
+                                    <div class="flex gap-3 text-gray-600 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                        </svg>
+
+                                        <span class="text-gray-600">5</span>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="text-white size-8 rounded-full p-1 bg-primaryColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+                                    </svg>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="bg-[#12132D10] rounded-lg px-5 py-3 flex justify-evenly gap-2 my-5 cursor-pointer">
+                        <div class="">
+                            <!-- images -->
+                            <div class="rounded-full border-2 border-purple-400 p-1 w-16 h-16 "><img
+                                    src="https://i.ibb.co/z8zx95w/pexels-davide-de-giovanni-1649675.jpg" alt=""
+                                    class=" rounded-full w-ful"></div>
+                        </div>
+                        <!-- text content  -->
+                        <div class="">
+                            <div class="text-gray-600">
+                                <span class="">#: Music</span> <span class="mx-5">Author: Awlad Hossain</span>
+                            </div>
+                            <h3 class="text-lg font-bold my-2">10 Kids Unaware of Their Halloween Costume</h3>
+                            <p class="text-gray-600 max-w-md my-3 mb-6">It’s one thing to subject yourself to ha
+                                Halloween
+                                costume mishap because, hey that’s your prerogative</p>
+                            <!-- lijke button  -->
+                            <div class="flex border-dashed border-t-2 border-gray-400 justify-between items-center">
+                                <div class="py-3  flex gap-5">
+                                    <div class="flex gap-3 text-gray-600 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                        </svg>
+
+                                        <span class="text-gray-600">5600</span>
+                                    </div>
+                                    <div class="flex gap-3 text-gray-600 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                        </svg>
+                                        <span class="text-gray-600">560</span>
+                                    </div>
+                                    <div class="flex gap-3 text-gray-600 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                        </svg>
+
+                                        <span class="text-gray-600">5</span>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="text-white size-8 rounded-full p-1 bg-primaryColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+                                    </svg>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="bg-[#12132D10] rounded-lg px-5 py-3 flex justify-evenly gap-2 my-5 cursor-pointer">
+                        <div class="">
+                            <!-- images -->
+                            <div class="rounded-full border-2 border-purple-400 p-1 w-16 h-16 "><img
+                                    src="https://i.ibb.co/z8zx95w/pexels-davide-de-giovanni-1649675.jpg" alt=""
+                                    class=" rounded-full w-ful"></div>
+                        </div>
+                        <!-- text content  -->
+                        <div class="">
+                            <div class="text-gray-600">
+                                <span class="">#: Music</span> <span class="mx-5">Author: Awlad Hossain</span>
+                            </div>
+                            <h3 class="text-lg font-bold my-2">10 Kids Unaware of Their Halloween Costume</h3>
+                            <p class="text-gray-600 max-w-md my-3 mb-6">It’s one thing to subject yourself to ha
+                                Halloween
+                                costume mishap because, hey that’s your prerogative</p>
+                            <!-- lijke button  -->
+                            <div class="flex border-dashed border-t-2 border-gray-400 justify-between items-center">
+                                <div class="py-3  flex gap-5">
+                                    <div class="flex gap-3 text-gray-600 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                        </svg>
+
+                                        <span class="text-gray-600">5600</span>
+                                    </div>
+                                    <div class="flex gap-3 text-gray-600 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                        </svg>
+                                        <span class="text-gray-600">560</span>
+                                    </div>
+                                    <div class="flex gap-3 text-gray-600 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                        </svg>
+
+                                        <span class="text-gray-600">5</span>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="text-white size-8 rounded-full p-1 bg-primaryColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+                                    </svg>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-3 my-5">
+                    <div class="bg-[#12132D10] py-4 px-2 rounded-xl ">
+                        <!-- heading  -->
+                        <div class="flex justify-between">
+                            <h3 class="font bold text-lg font-bold ">Tittle</h3>
+                            <p class="text-gray-600 text-sm flex gap-2 items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4 text-green-600">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+
+                                Mark as read <span>(4)</span>
+                            </p>
+                        </div>
+                        <!-- tittle one  -->
+                        <div class="flex justify-between bg-white rounded-xl py-4 px-2 my-4">
+                            <h3 class="font-bold  max-w-sm">10 Kids Unaware of Their Halloween Costume</h3>
+                            <div class="flex gap-3 text-gray-600 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+
+                                <span class="text-gray-600">5600</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between bg-white rounded-xl py-4 px-2 my-4">
+                            <h3 class="font-bold  max-w-sm">10 Kids Unaware of Their Halloween Costume</h3>
+                            <div class="flex gap-3 text-gray-600 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+
+                                <span class="text-gray-600">5600</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between bg-white rounded-xl py-4 px-2 my-4">
+                            <h3 class="font-bold  max-w-sm">10 Kids Unaware of Their Halloween Costume</h3>
+                            <div class="flex gap-3 text-gray-600 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+
+                                <span class="text-gray-600">5600</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between bg-white rounded-xl py-4 px-2 my-4">
+                            <h3 class="font-bold  max-w-sm">10 Kids Unaware of Their Halloween Costume</h3>
+                            <div class="flex gap-3 text-gray-600 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>
+
+                                <span class="text-gray-600">5600</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="my-5">
+            <div class="flex flex-col items-center">
+                <h3 class="font-bold text-3xl text-center">Lastest Post</h3>
+                <p class="max-w-md text-md my-3 text-gray-500 text-center">Yes, you can run unit tests and view the
+                    results directly within the app. The integrated testing features allow for a streamlined .</p>
+            </div>
+            <div class="grid w-11/12 mx-auto grid-cols-3 gap-4">
+                <!-- card 1 -->
+                <div class="p-3 border border-bordercolor rounded-lg">
+                    <!-- image  -->
+                    <div class="h-44"><img src="" class=" h-full rounded-lg object-cover w-full" alt=""></div>
+                    <!-- text content  -->
+                    <div class="my-3 ">
+                        <div class="">
+                            <time datetime="01-03-2025" class=" text-gray-600 my-1">29 JAN 2025</time>
+                            <!-- detail  -->
+                            <div class="flex flex-col">
+                                <h3 class="text-lg font-bold">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</h3>
+                                <p class="text-gray-400 my-2 font-medium flex items-center gap-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <!-- profile picture  -->
+                            <div class="flex gap-2">
+                                <div class="w-12 h-12 rounded-full border-4 border-blue-500 p-1"><img class="h-full  object-fill rounded-full w-full" src="" alt=""></div>
+                                <!-- text-content  -->
+                                <div class="">
+                                    <h3 class="text-lg font-extrabold">Cameron Williamson</h3>
+                                    <p class="text-gray-600 my-2">web developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-3 border border-bordercolor rounded-lg">
+                    <!-- image  -->
+                    <div class="h-44"><img src="" class=" h-full rounded-lg object-cover w-full" alt=""></div>
+                    <!-- text content  -->
+                    <div class="my-3 ">
+                        <div class="">
+                            <time datetime="01-03-2025" class=" text-gray-600 my-1">29 JAN 2025</time>
+                            <!-- detail  -->
+                            <div class="flex flex-col">
+                                <h3 class="text-lg font-bold">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</h3>
+                                <p class="text-gray-400 my-2 font-medium flex items-center gap-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <!-- profile picture  -->
+                            <div class="flex gap-2">
+                                <div class="w-12 h-12 rounded-full border-4 border-blue-500 p-1"><img class="h-full  object-fill rounded-full w-full" src="" alt=""></div>
+                                <!-- text-content  -->
+                                <div class="">
+                                    <h3 class="text-lg font-extrabold">Cameron Williamson</h3>
+                                    <p class="text-gray-600 my-2">web developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-3 border border-bordercolor rounded-lg">
+                    <!-- image  -->
+                    <div class="h-44"><img src="" class=" h-full rounded-lg object-cover w-full" alt=""></div>
+                    <!-- text content  -->
+                    <div class="my-3 ">
+                        <div class="">
+                            <time datetime="01-03-2025" class=" text-gray-600 my-1">29 JAN 2025</time>
+                            <!-- detail  -->
+                            <div class="flex flex-col">
+                                <h3 class="text-lg font-bold">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</h3>
+                                <p class="text-gray-400 my-2 font-medium flex items-center gap-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                            <!-- profile picture  -->
+                            <div class="flex gap-2">
+                                <div class="w-12 h-12 rounded-full border-4 border-blue-500 p-1"><img class="h-full  object-fill rounded-full w-full" src="" alt=""></div>
+                                <!-- text-content  -->
+                                <div class="">
+                                    <h3 class="text-lg font-extrabold">Cameron Williamson</h3>
+                                    <p class="text-gray-600 my-2">web developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
