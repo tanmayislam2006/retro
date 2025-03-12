@@ -3,10 +3,10 @@ module.exports = {
         extend: {
             colors: {
                 clifford: '#da373d',
-                primary: '#F72C5B',
-                'primary-bg': '#FFEEE6',
+                primary: '#7A73D1',
+                "primary-bg": '#f72c5b',
                 'header-bg': '#FFF9F4',
-                'footer-bg': '#0',
+                'footer-bg': '#000000', // Changed '#0' to '#000000' for clarity
                 'bordercolor': '#E9E9E9',
             },
             fontFamily: {
