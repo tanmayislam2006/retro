@@ -24,7 +24,7 @@ const getLastesPost = (allPost) => {
                 </div>
                 <!-- profile picture  -->
                 <div class="flex gap-2">
-                    <div class="w-12 h-12 rounded-full border-4 border-blue-500 p-1"><img
+                    <div class="w-12 h-12 rounded-full border-2 ${post.isActive==true?"border-purple-400":"border-pink-400"} p-1"><img
                             class="h-full  object-fill rounded-full w-full" src=${post.profile_image} alt=""></div>
                     <!-- text-content  -->
                     <div class="">
@@ -54,13 +54,12 @@ fetchAllPosts();
 const getAllPost = (allPost) => {
     allPostCard.innerHTML=""
     allPost.forEach(post => {
-        console.log(post);
         const postCardAll = document.createElement("div")
         postCardAll.classList.add("bg-[#12132D10]", "rounded-lg", "px-5", "py-6", "flex", "justify-evenly", "gap-2", "my-5", "cursor-pointer")
         postCardAll.innerHTML = `
                                 <div class="">
                             <!-- images -->
-                            <div class="rounded-full border-2 border-purple-400 p-1 w-16 h-16 "><img
+                            <div class="rounded-full border-2 ${post.isActive==true?"border-purple-400":"border-gray-700"} p-1 w-16 h-16 "><img
                                     src=${post.image} alt=""
                                     class=" rounded-full w-ful"></div>
                         </div>
