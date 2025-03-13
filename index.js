@@ -1,6 +1,11 @@
 const lastPostDiv = document.getElementById("lastes-post");
 const allPostCard = document.getElementById("all-post-card");
+const searchBtn = document.getElementById("search-btn")
 
+fetch("https://openapi.programming-hero.com/api/retro-forum/latest-posts")
+    .then(res => res.json())
+    .then(data => getLastesPost(data))
+    .catch(err => console.log(err, "mara khau"))
 const getLastesPost = (allPost) => {
     for (const post of allPost) {
         const postCard = document.createElement("div");
@@ -46,11 +51,13 @@ const fetchAllPosts = async () => {
 
 fetchAllPosts();
 
-const getAllPost=(allPost)=>{
+const getAllPost = (allPost) => {
     allPost.forEach(post => {
-        const postCardAll=document.createElement("div")
+        allPostCard.innerHTML = ""
+        console.log(post);
+        const postCardAll = document.createElement("div")
         postCardAll.classList.add("bg-[#12132D10]", "rounded-lg", "px-5", "py-3", "flex", "justify-evenly", "gap-2", "my-5", "cursor-pointer")
-        postCardAll.innerHTML=`
+        postCardAll.innerHTML = `
                                 <div class="">
                             <!-- images -->
                             <div class="rounded-full border-2 border-purple-400 p-1 w-16 h-16 "><img
@@ -113,3 +120,15 @@ const getAllPost=(allPost)=>{
     });
 
 }
+// serch button -----------------------------
+searchBtn.addEventListener("click", event => {
+    const searchField = document.getElementById("search-field").value;
+    fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchField}`)
+        .then(res => res.json())
+        .then(data => getAllPost(data.posts))
+        .catch(err => {
+            console.log(err, "error marche boss");
+        })
+
+
+})
