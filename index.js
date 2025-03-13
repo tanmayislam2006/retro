@@ -53,6 +53,13 @@ fetchAllPosts();
 
 const getAllPost = (allPost) => {
     allPostCard.innerHTML=""
+    if (allPost.length === 0) {
+        const noContent = document.createElement("div")
+        noContent.classList.add("flex", "justify-center")
+        noContent.innerHTML = `<div class="w-3/4"><img src="./images/No data-amico.svg" alt=""></div>`
+        allPostCard.append(noContent);
+        return
+    }
     allPost.forEach(post => {
         const postCardAll = document.createElement("div")
         postCardAll.classList.add("bg-[#12132D10]", "rounded-lg", "px-5", "py-6", "flex", "justify-evenly", "gap-2", "my-5", "cursor-pointer")
