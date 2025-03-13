@@ -1,6 +1,9 @@
 const lastPostDiv = document.getElementById("lastes-post");
 const allPostCard = document.getElementById("all-post-card");
 const searchBtn = document.getElementById("search-btn")
+const postTitle = document.getElementById("post-title")
+const readNumberString = document.getElementById("read")
+let readNumber = parseInt(readNumberString.innerText)
 
 fetch("https://openapi.programming-hero.com/api/retro-forum/latest-posts")
     .then(res => res.json())
@@ -24,7 +27,7 @@ const getLastesPost = (allPost) => {
                 </div>
                 <!-- profile picture  -->
                 <div class="flex gap-2">
-                    <div class="w-12 h-12 rounded-full border-2 ${post.isActive==true?"border-purple-400":"border-pink-400"} p-1"><img
+                    <div class="w-12 h-12 rounded-full border-2 ${post.isActive == true ? "border-purple-400" : "border-pink-400"} p-1"><img
                             class="h-full  object-fill rounded-full w-full" src=${post.profile_image} alt=""></div>
                     <!-- text-content  -->
                     <div class="">
@@ -52,7 +55,7 @@ const fetchAllPosts = async () => {
 fetchAllPosts();
 
 const getAllPost = (allPost) => {
-    allPostCard.innerHTML=""
+    allPostCard.innerHTML = ""
     if (allPost.length === 0) {
         const noContent = document.createElement("div")
         noContent.classList.add("flex", "justify-center")
@@ -62,11 +65,38 @@ const getAllPost = (allPost) => {
     }
     allPost.forEach(post => {
         const postCardAll = document.createElement("div")
-        postCardAll.classList.add("bg-[#12132D10]", "rounded-lg", "px-5", "py-6", "flex", "justify-evenly", "gap-2", "my-5", "cursor-pointer")
+        postCardAll.addEventListener("click", (event) => {
+            console.log(event.target);
+            if (readNumber <= 6) {
+                readNumber++
+                readNumberString.innerHTML = readNumber
+                postCardAll.classList.add("border-purple-500", "border-2")
+                const title = postCardAll.children[1].children[1].innerText;
+                const veiws = postCardAll.children[1].children[3].children[0].children[0].children[1].innerText;
+                const createTitle = document.createElement("div");
+                createTitle.classList.add("flex", "justify-between", "bg-white", "rounded-xl", "py-4", "px-2", "my-4");
+                createTitle.innerHTML = `
+                                <h3 class="font-bold  max-w-sm">${title}</h3>
+                                <div class="flex gap-3 text-gray-600 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    </svg>
+    
+                                    <span class="text-gray-600">${veiws}</span>
+                `
+                postTitle.append(createTitle)
+            }
+        })
+        postCardAll.id = `${post.id}`
+        postCardAll.classList.add("bg-[#12132D10]", "rounded-lg", "px-5", "py-6", "flex", "justify-evenly", "gap-2", "my-5", "cursor-pointer", "post-card")
         postCardAll.innerHTML = `
-                                <div class="">
+                                <div id="" class="">
                             <!-- images -->
-                            <div class="rounded-full border-2 ${post.isActive==true?"border-purple-400":"border-gray-700"} p-1 w-16 h-16 "><img
+                            <div class="rounded-full border-2 ${post.isActive == true ? "border-purple-400" : "border-gray-700"} p-1 w-16 h-16 "><img
                                     src=${post.image} alt=""
                                     class=" rounded-full w-ful"></div>
                         </div>
@@ -135,7 +165,7 @@ searchBtn.addEventListener("click", event => {
         .catch(err => {
             console.log(err, "error marche boss");
         })
-        allPostCard.innerHTML=""
+    allPostCard.innerHTML = ""
 
 
 })
