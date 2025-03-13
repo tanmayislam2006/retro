@@ -5,7 +5,7 @@ const searchBtn = document.getElementById("search-btn")
 fetch("https://openapi.programming-hero.com/api/retro-forum/latest-posts")
     .then(res => res.json())
     .then(data => getLastesPost(data))
-    .catch(err => console.log(err, "mara khau"))
+    .catch(err => console.log(err, "mara khau"));
 const getLastesPost = (allPost) => {
     for (const post of allPost) {
         const postCard = document.createElement("div");
@@ -52,11 +52,11 @@ const fetchAllPosts = async () => {
 fetchAllPosts();
 
 const getAllPost = (allPost) => {
+    allPostCard.innerHTML=""
     allPost.forEach(post => {
-        allPostCard.innerHTML = ""
         console.log(post);
         const postCardAll = document.createElement("div")
-        postCardAll.classList.add("bg-[#12132D10]", "rounded-lg", "px-5", "py-3", "flex", "justify-evenly", "gap-2", "my-5", "cursor-pointer")
+        postCardAll.classList.add("bg-[#12132D10]", "rounded-lg", "px-5", "py-6", "flex", "justify-evenly", "gap-2", "my-5", "cursor-pointer")
         postCardAll.innerHTML = `
                                 <div class="">
                             <!-- images -->
@@ -129,6 +129,7 @@ searchBtn.addEventListener("click", event => {
         .catch(err => {
             console.log(err, "error marche boss");
         })
+        allPostCard.innerHTML=""
 
 
 })
