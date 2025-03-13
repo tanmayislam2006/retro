@@ -67,7 +67,7 @@ const getAllPost = (allPost) => {
         const postCardAll = document.createElement("div")
         postCardAll.addEventListener("click", (event) => {
             console.log(event.target);
-            if (readNumber <= 6) {
+            if (readNumber < allPostCard.children.length) {
                 readNumber++
                 readNumberString.innerHTML = readNumber
                 postCardAll.classList.add("border-purple-500", "border-2")
